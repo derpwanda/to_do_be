@@ -1,19 +1,23 @@
 {
-  "name": "to_do_be",
-  "version": "1.0.0",
-  "description": "backend for to-do project",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/derpwanda/to_do_be.git"
-  },
-  "author": "Wanda Evans",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/derpwanda/to_do_be/issues"
-  },
-  "homepage": "https://github.com/derpwanda/to_do_be#readme"
+    "name": "to_do_be",
+    "version": "1.0.0",
+    "description": "backend for to-do project",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/derpwanda/to_do_be.git"
+    },
+    "author": "Wanda Evans",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/derpwanda/to_do_be/issues"
+    },
+    "homepage": "https://github.com/derpwanda/to_do_be#readme",
+    "dependencies": {
+        "express": "^4.17.1"
+    }
 }
