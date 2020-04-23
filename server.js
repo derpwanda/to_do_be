@@ -1,12 +1,21 @@
 const express = require('express');
 const logger = require('./middleware/logger')
+const atGate = require('./middleware/atGate')
+const auth = require('./middleware/auth')
 const notesRoutes = require('./routes/notesRoutes')
 const welcomeRoute = require('./routes/welcomeRoute')
 
 const server = express(); // creates the server
 server.use(express.json()) //every route in project uses json as default
 
-server.use(logger)
+server.use(logger);
+server.use(atGate);
+
+server.get('/password', auth, (req, res) => {
+    console.log('Gate opening...')
+    console.log('Inside and safe!')
+    res.send('Approved!')
+})
 
 server.use('/welcome', welcomeRoute)
 server.use('/notes', notesRoutes) //server midware, create /notes portion of url
