@@ -1,20 +1,6 @@
 const express = require('express')
 const router = express.Router();
 
-// router.get('/', (req, res) => {
-//     res.status(200).send('hello from notesRouter')
-// })
-
-// router.get('/:id', (req, res) => {
-//     const id = req.params.id
-//     res.status(200).send('hello rom the user by id')
-// })
-
-// router.post('/', (res, req) => {
-//     res.status(200).send('hello from post')
-// })
-
-
 // handle requests to the root of the api, the / route
 router.get('/', (req, res) => {
     // res.send('I\'m Alive');
