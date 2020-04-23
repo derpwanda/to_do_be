@@ -1,20 +1,21 @@
 const express = require('express')
 const router = express.Router();
 
-router.get('/', (req, res) => {
-    res.status(200).send('hello from notesRouter')
-})
+// router.get('/', (req, res) => {
+//     res.status(200).send('hello from notesRouter')
+// })
 
-router.get('/:id', (req, res) => {
-    const id = req.params.id
-    res.status(200).send('hello rom the user by id')
-})
+// router.get('/:id', (req, res) => {
+//     const id = req.params.id
+//     res.status(200).send('hello rom the user by id')
+// })
 
-router.post('/', (res, req) => {
-    res.status(200).send('hello from post')
-})
+// router.post('/', (res, req) => {
+//     res.status(200).send('hello from post')
+// })
 
-/* // handle requests to the root of the api, the / route
+
+// handle requests to the root of the api, the / route
 router.get('/', (req, res) => {
     // res.send('I\'m Alive');
     res.status(200).json({ api: 'to_do_be I\'m Alive!!!' })
@@ -77,7 +78,7 @@ router.delete('/:noteid', (req, res) => {
             res.status(204).json({ note });
         })
         .catch(error => res.status(500).json(error));
-}); */
+});
 
 //export routers
 module.exports = router;
