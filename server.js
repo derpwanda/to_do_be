@@ -1,16 +1,9 @@
-const express = require('express'); // import the express package
+const express = require('express');
+const notesRoutes = require('./notes/notesRoutes')
 const server = express(); // creates the server
 
-// handle requests to the root of the api, the / route
-server.get('/', (req, res) => {
-    // res.send('I\'m Alive');
-    res.status(200).json({ api: 'I\'m Alive!!!' })
-});
+server.use('/notes', notesRoutes) //server midware, create /notes portion of url
 
-server.get('/hello', (req, res) => {
-    // res.send({ hello: "Wanda" })
-    res.status(200).json({ hello: "Wanda" })
-})
 
 // watch for connections on port 5000
 const port = 5000
