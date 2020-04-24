@@ -2,7 +2,7 @@ const express = require('express');
 const logger = require('./middleware/logger')
 const atGate = require('./middleware/atGate')
 const auth = require('./middleware/auth')
-const notesRoutes = require('./routes/notesRoutes')
+const notesRoutes = require('./routes/notesRoutes') //midware
 const welcomeRoute = require('./routes/welcomeRoute')
 
 const server = express(); // creates the server
