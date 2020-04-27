@@ -7,7 +7,7 @@ exports.up = function (knex) {
             .notNullable()
             .unique()
 
-        tbl.string('password', 64).notNullable()
+        tbl.string('password', 128).notNullable()
     })
         .createTable('notes', tbl => {
             tbl.increments();

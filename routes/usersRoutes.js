@@ -1,14 +1,20 @@
 const express = require('express')
 const router = express.Router();
+const bcrypt = require('bcryptjs')
 const Users = require('../database/models/userModels')
+const auth = require('../middleware/auth')
 
 
 router.post('/signup', (req, res) => {
-    const user = req.body;
+    const user = req.body
 
+    const hash = bcrypt.hashSync(user.password, 10);
+    user.password = hash
+
+    console.log('hello from user router signup')
     Users.add(user)
-        .then(user => {
-            res.status(201).json({ message: 'User Added', user });
+        .then(saved => {
+            res.status(201).json({ message: 'User Added', saved });
         })
         .catch(err => {
             res.status(500).json({ message: 'Error adding user', err });
