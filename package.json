@@ -18,7 +18,9 @@
     },
     "homepage": "https://github.com/derpwanda/to_do_be#readme",
     "dependencies": {
-        "express": "^4.17.1"
+        "express": "^4.17.1",
+        "knex": "^0.21.0",
+        "sqlite3": "^4.1.1"
     },
     "devDependencies": {
         "nodemon": "^2.0.3"
