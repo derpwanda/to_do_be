@@ -8,6 +8,7 @@ function auth(req, res, next) {
     user.password = hash
 
     console.log('goodbye from auth')
+
 }
 
 module.exports = auth;
