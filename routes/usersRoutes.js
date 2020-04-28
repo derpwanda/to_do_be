@@ -29,7 +29,7 @@ router.get("/:id", (req, res, next) => {
 });
 
 //get a users notes
-router.get("/:id/notes", restricted, (req, res, next) => {
+router.get("/:id/notes", protected, (req, res, next) => {
     const { userid } = req.params;
 
     Users.findById(userid)
@@ -49,7 +49,7 @@ router.get("/:id/notes", restricted, (req, res, next) => {
 });
 
 //delete a user by id
-router.delete("/:userid", restricted, (req, res, next) => {
+router.delete("/:userid", protected, (req, res, next) => {
     const { userid } = req.params;
 
     Users.deleteUser(userid)

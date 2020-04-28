@@ -9,7 +9,6 @@ router.post('/signup', (req, res, next) => {
     const hash = bcrypt.hashSync(user.password, 10);
     user.password = hash
 
-    console.log('hello from user router signup')
     Users.add(user)
         .then(saved => {
             const { id, username } = user
@@ -27,6 +26,7 @@ router.post('/login', (req, res, next) => {
         .first()
         .then(user => {
             if (user && bcrypt.compareSync(password, user.password)) {
+                req.session.user = user
                 res.status(200).json({ message: `Welcome ${user.username}!` });
             } else {
                 res.status(401).json({ message: 'Invalid Credentials' })

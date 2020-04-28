@@ -13,7 +13,8 @@ const sessionConfig = {
     name: 'watercolor', //sid
     secret: 'quinacridone gold is my favorite',
     cookie: {
-        maxAge: 1 * 24 * 60 * 60 * 1000, // 24 h
+        // maxAge: 1 * 24 * 60 * 60 * 1000, // 24 h
+        maxAge: 30 * 1000, // 30s
         secure: false, //true in production
         httpOnly: true, //not accessible w js
     },
