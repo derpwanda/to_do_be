@@ -30,6 +30,7 @@ async function add(user) {
 
 function findById(id) {
     return db("users")
+        .select("id", "username") // doesnt display password
         .where({ id })
         .first();
 }

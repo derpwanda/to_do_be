@@ -13,7 +13,7 @@ server.get('/', (req, res) => {
     res.send('Welcome to my To Do Application!')
 })
 
-server.use('/user', userRoutes)
+server.use('/users', userRoutes)
 server.use('/notes', notesRoutes) //server midware, create /notes portion of url
 
 /* //fallback for wrong request (put after routes always)

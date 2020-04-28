@@ -48,9 +48,9 @@ router.get("/", (req, res) => {
         .catch(err => res.send(err));
 });
 
-//get a user
+//get a single user by id
 router.get("/:id", (req, res, next) => {
-    const id = req.params.id;
+    const { id } = req.params;
 
     Users.findById(id)
         .then(user => {
@@ -63,9 +63,9 @@ router.get("/:id", (req, res, next) => {
 
 //get a users notes
 router.get("/:id/notes", (req, res, next) => {
-    const { userid } = req.params;
+    const id = req.params.id;
 
-    Users.findById(userid)
+    Users.findById(id)
         .then(user => {
             Users.getNotesByUserId(id)
                 .then(notes => {
