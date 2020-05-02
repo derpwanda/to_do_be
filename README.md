@@ -10,8 +10,7 @@
 [X] View an existing note.
 [X] Edit an existing note.
 [X] Delete an existing note.
-
--   Modify your front-end so that it uses your newly created Web API.
+[X] Modify your front-end so that it uses your newly created Web API.
 
 ---
 
